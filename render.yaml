@@ -1,8 +1,8 @@
 services:
   - name: backup-db
     type: cron
-    # 4pm UTC is 2am or 3am in Sydney (daylight savings being the variable)
-    schedule: "0 16 * * *"
+    # 4pm UTC is 2/3am, 8/9am, 2/3pm, 8/9pm in Sydney (daylight savings being the variable)
+    schedule: "0 3,9,15,21 * * *"
     region: singapore
     env: docker
     plan: standard
